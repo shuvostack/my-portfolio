@@ -2,7 +2,7 @@ import React from 'react';
 import { Download, Facebook, Github, Linkedin, Twitter } from 'lucide-react';
 import { motion } from 'framer-motion';
 import profileImg from '../../assets/Me2.jpg'; 
-// import resume from '../../assets/resume.pdf'; // আপনার রেজুমে পাথ ঠিক করুন
+import resume from '../../assets/resume.pdf'; 
 
 const Hero = () => {
     return (
@@ -36,7 +36,7 @@ const Hero = () => {
                     {/* Buttons & Socials */}
                     <div className="flex flex-col md:flex-row items-center gap-6">
                         <a 
-                            // href={resume} 
+                            href={resume} 
                             download="Mehedi_Resume.pdf"
                             className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-green-500 to-cyan-600 text-white font-bold shadow-lg shadow-green-500/30 overflow-hidden"
                         >

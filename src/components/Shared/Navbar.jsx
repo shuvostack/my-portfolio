@@ -3,6 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { useLocation, useNavigate } from 'react-router';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import resume from '../../assets/resume.pdf';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,6 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // মেনু আইটেমগুলোর লিস্ট
   const navItems = [
     { name: 'Home', to: 'home' },
     { name: 'About', to: 'about' },
@@ -20,7 +20,6 @@ const Navbar = () => {
     { name: 'Contact', to: 'contact' },
   ];
 
-  // স্ক্রল করলে ব্যাকগ্রাউন্ড চেঞ্জ হবে
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -96,7 +95,7 @@ const Navbar = () => {
 
           {/* Resume Button */}
           <a
-            href="/resume.pdf" // assets ফোল্ডারে resume.pdf থাকতে হবে
+            href={resume}
             download="Mehedi_Resume.pdf"
             className="px-5 py-2 rounded-full border border-green-500/50 text-green-400 hover:bg-green-500/10 hover:border-green-400 transition-all duration-300 font-medium text-sm"
           >
