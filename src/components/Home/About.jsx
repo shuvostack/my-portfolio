@@ -1,13 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Coffee, Globe, BookOpen } from 'lucide-react';
-// আইকন ইমপোর্ট
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { SiJavascript, SiMongodb, SiTailwindcss } from "react-icons/si";
 import myImg from '../../assets/Me2.jpg';
-
-// ⚠️ আপনার ছবির ইমপোর্ট ঠিক আছে কিনা দেখে নিবেন
-// const profileImgUrl = "https://i.ibb.co/5K7F03x/placeholder-profile.jpg"; 
 
 const About = () => {
   const fadeIn = {
@@ -52,7 +48,6 @@ const About = () => {
              </div>
 
              {/* --- Inner Orbit Ring (Core Skills) --- */}
-             {/* সরাসরি animate-[spin_10s_linear_infinite] ব্যবহার করা হয়েছে */}
              <div className="absolute w-[260px] h-[260px] md:w-[300px] md:h-[300px] rounded-full border border-slate-700/30 animate-[spin_10s_linear_infinite] z-10">
                 <OrbitIcon icon={<FaReact size={24} className="text-cyan-400"/>} position="top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                 <OrbitIcon icon={<FaNodeJs size={24} className="text-green-500"/>} position="bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" />
@@ -61,7 +56,6 @@ const About = () => {
              </div>
 
              {/* --- Outer Orbit Ring (Tools) --- */}
-             {/* সরাসরি animate-[spin_15s_linear_infinite] ব্যবহার করা হয়েছে */}
              <div className="absolute w-[360px] h-[360px] md:w-[440px] md:h-[440px] rounded-full border border-slate-700/20 animate-[spin_15s_linear_infinite] z-0">
                 <OrbitIcon icon={<FaHtml5 size={20} className="text-orange-500"/>} position="top-[15%] left-[15%]" />
                 <OrbitIcon icon={<FaCss3Alt size={20} className="text-blue-500"/>} position="top-[15%] right-[15%]" />

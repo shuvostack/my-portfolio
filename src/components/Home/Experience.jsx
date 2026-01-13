@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Briefcase, Code2, Rocket, Calendar } from 'lucide-react';
 
 const Experience = () => {
+    
   const experienceData = [
     {
       id: 1,

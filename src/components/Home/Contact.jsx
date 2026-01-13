@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, MessageCircle, Loader2 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
   const form = useRef();
@@ -38,22 +39,38 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // ⚠️ EmailJS Configuration
+    // EmailJS Configuration
     emailjs.sendForm(
-        'service_18gsql4',   // আপনার Service ID (বসানো আছে)
-        'template_pp0u1ki',  // ⚠️ এখানে EmailJS থেকে পাওয়া Template ID বসান
+        'service_18gsql4',   // service key
+        'template_pp0u1ki',  // template id
         form.current, 
-        'uXmBe2-vGYGMG3kah'    // ⚠️ এখানে EmailJS থেকে পাওয়া Public Key বসান
+        'uXmBe2-vGYGMG3kah'  // public key
     )
       .then((result) => {
           console.log(result.text);
           setLoading(false);
-          alert("Message sent successfully! I will get back to you soon.");
-          form.current.reset(); // ফর্ম ক্লিয়ার করা
+          Swal.fire({
+            title: 'Message Sent!',
+            text: 'I will get back to you soon.',
+            icon: 'success',
+            confirmButtonText: 'Great!',
+            confirmButtonColor: '#22c55e', 
+            background: '#1e293b',         
+            color: '#ffffff'               
+        });
+          form.current.reset(); 
       }, (error) => {
           console.log(error.text);
           setLoading(false);
-          alert("Failed to send message. Please try again later.");
+          Swal.fire({
+            title: 'Oops!',
+            text: 'Failed to send message. Please try again later.',
+            icon: 'error',
+            confirmButtonText: 'Close',
+            confirmButtonColor: '#ef4444',
+            background: '#1e293b',
+            color: '#ffffff'
+        });
       });
   };
 
@@ -133,7 +150,7 @@ const Contact = () => {
                   <label className="text-sm font-medium text-slate-300">Name</label>
                   <input 
                     type="text" 
-                    name="user_name" // EmailJS এই নাম ধরবে
+                    name="user_name" 
                     required
                     placeholder="Your Name"
                     className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
@@ -143,7 +160,7 @@ const Contact = () => {
                   <label className="text-sm font-medium text-slate-300">Email</label>
                   <input 
                     type="email" 
-                    name="user_email" // EmailJS এই ইমেইল ধরবে
+                    name="user_email" 
                     required
                     placeholder="your@email.com"
                     className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
@@ -165,7 +182,7 @@ const Contact = () => {
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-300">Message</label>
                 <textarea 
-                  name="message" // EmailJS এই মেসেজ ধরবে
+                  name="message" 
                   required
                   rows="4"
                   placeholder="Tell me about your project..."

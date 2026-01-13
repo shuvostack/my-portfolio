@@ -91,7 +91,7 @@ const Projects = () => {
                             {project.name}
                         </h3>
                         
-                        {/* Quick Links (Github/Live) */}
+                        {/* Quick Links */}
                         <div className="flex gap-3">
                             <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors" title="GitHub">
                                 <Github size={18} />
@@ -106,7 +106,7 @@ const Projects = () => {
                         {project.shortDescription}
                     </p>
 
-                    {/* Tech Stack (Code Style Badges) */}
+                    {/* Tech Stack */}
                     <div className="pt-4 border-t border-slate-700/50">
                         <div className="flex flex-wrap gap-2">
                             {project.techStack.slice(0, 4).map((tech, i) => (
@@ -135,7 +135,7 @@ const Projects = () => {
           ))}
         </div>
         
-        {/* See More Button (Optional) */}
+        {/* See More Button */}
         <div className="mt-16 text-center">
             <a 
                 href="https://github.com/shuvostack" 

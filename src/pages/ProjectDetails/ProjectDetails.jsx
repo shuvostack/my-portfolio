@@ -10,17 +10,14 @@ const ProjectDetails = () => {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // আইডি দিয়ে প্রজেক্ট ডাটা খুঁজে বের করা
   useEffect(() => {
     const foundProject = projectsData.find(p => p.id === parseInt(id));
     if (foundProject) {
       setProject(foundProject);
     } else {
-      // প্রজেক্ট না পাওয়া গেলে হোমে ফেরত পাঠানো
       navigate('/');
     }
     setLoading(false);
-    // পেজ লোড হলে একদম উপরে স্ক্রল করা
     window.scrollTo(0, 0);
   }, [id, navigate]);
 
@@ -30,7 +27,6 @@ const ProjectDetails = () => {
 
   if (!project) return null;
 
-  // এনিমেশন ভেরিয়েন্ট
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -39,7 +35,7 @@ const ProjectDetails = () => {
   return (
     <div className="bg-slate-900 min-h-screen pb-20 overflow-x-hidden">
       
-      {/* === Section 1: Hero Header (Immersive) === */}
+      {/* === Section 1: Hero Header === */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-end justify-center overflow-hidden">
         {/* Blurred Background Image */}
         <div 
@@ -56,7 +52,7 @@ const ProjectDetails = () => {
             </Link>
 
             <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
-                {/* Main Screenshot (Floating) */}
+                {/* Main Screenshot */}
                 <div className="relative mx-auto max-w-4xl -mb-24 md:-mb-32 z-20">
                     <div className="rounded-2xl overflow-hidden shadow-2xl shadow-green-500/10 border-[6px] border-slate-800/50 backdrop-blur-md">
                         <img src={project.image} alt={project.name} className="w-full" />
@@ -101,7 +97,7 @@ const ProjectDetails = () => {
         {/* === Section 3: Main Content Grid === */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
             
-            {/* Left Column: Description & Tech Stack (Span 8 cols) */}
+            {/* Left Column: Description & Tech Stack */}
             <motion.div 
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                 className="lg:col-span-8 space-y-10"
@@ -135,12 +131,12 @@ const ProjectDetails = () => {
             </motion.div>
 
 
-            {/* Right Column: Challenges & Future (Span 4 cols) - Sticky Sidebar Style */}
+            {/* Right Column: Challenges & Future - Sticky Sidebar Style */}
             <motion.div 
                  initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                  className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 h-fit"
             >
-                {/* Challenges Card (Unique Warning Style) */}
+                {/* Challenges Card */}
                 <div className="bg-gradient-to-br from-slate-800/50 to-red-900/10 p-6 rounded-2xl border border-red-500/20 hover:border-red-500/40 transition-colors relative overflow-hidden">
                     <div className="absolute top-0 right-0 -mt-4 -mr-4 text-red-500/10">
                         <AlertTriangle size={100} />
@@ -153,7 +149,7 @@ const ProjectDetails = () => {
                     </p>
                 </div>
 
-                 {/* Future Plan Card (Unique Hopeful Style) */}
+                 {/* Future Plan Card */}
                  <div className="bg-gradient-to-br from-slate-800/50 to-green-900/10 p-6 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-colors relative overflow-hidden">
                     <div className="absolute top-0 right-0 -mt-4 -mr-4 text-green-500/10">
                         <Rocket size={100} />

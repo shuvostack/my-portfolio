@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { GraduationCap, Calendar, MapPin, Award, BookOpen, Laptop } from 'lucide-react';
 
 const Education = () => {
-  // Resume থেকে নেওয়া ডেটা
+    
   const educationData = [
     {
       id: 1,

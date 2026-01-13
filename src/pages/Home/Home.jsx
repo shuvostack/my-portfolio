@@ -1,7 +1,4 @@
 import React from 'react';
-
-// সেকশন কম্পোনেন্টগুলো ইমপোর্ট করা হচ্ছে
-// import Hero from '../../components/Home/Hero';
 import About from '../../components/Home/About';
 import Skills from '../../components/Home/Skills';
 import Education from '../../components/Home/Education';
@@ -13,9 +10,6 @@ import Hero from '../../components/Home/Hero';
 const Home = () => {
     return (
         <div className="overflow-x-hidden">
-            {/* Navbar এর Link 'to="home"' এর সাথে মিল রেখে id="home" দেওয়া হয়েছে।
-               প্রতিটি সেকশনের id অবশ্যই Navbar এর to এর সাথে মিলতে হবে।
-            */}
             
             <section id="home">
                 <Hero />
