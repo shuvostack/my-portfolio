@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "PlateShare - Food Sharing Platform",
+    "image": "https://i.ibb.co/KzKF8ZGH/plate-share-img.png",
+    "shortDescription": "A community-driven platform to reduce food waste by sharing surplus food.",
+    "techStack": ["React", "Node.js", "MongoDB", "Tailwind", "Firebase"],
+    "liveLink": "https://plate-share-a7f54.web.app/",
+    "repoLink": "https://github.com/shuvostack/plate-share-client.git",
+    "fullDescription": "PlateShare is a full-stack web application designed to connect food donors with people in need. It features a firebase authentication system, real-time food request management, and a dashboard for both donors and requesters.",
+    "challenges": "Handling real-time state updates for food quantity and managing secure role-based access control (RBAC) for admins and users.",
+    "futurePlan": "Integration of real-time chat between donor and receiver, and map integration for location tracking."
+  },
+  {
+    "id": 2,
+    "name": "CityFix",
+    "image": "https://i.ibb.co/Z6RcwLtd/city-fix-img.png",
+    "shortDescription": "A public infrastructure reporting system to report issues like potholes or broken lights.",
+    "techStack": ["React", "Firebase", "Express.js", "MongoDB", "DaisyUI", "Firebase"],
+    "liveLink": "https://city-fix-316cb.web.app/",
+    "repoLink": "https://github.com/shuvostack/city-fix-client.git",
+    "fullDescription": "CityFix is a civic engagement platform that empowers citizens to report local infrastructure issues such as potholes, damaged streetlights, or garbage pile-ups. Users can submit reports with images, track the status of their complaints, and view a community feed of resolved issues. It aims to bridge the communication gap between citizens and municipal authorities.",
+    "challenges": "Integrating secure image hosting for user reports and managing real-time status updates (Pending -> Resolved) were key challenges. Additionally, implementing role-based dashboards for admins to moderate and update report statuses required complex backend logic.",
+    "futurePlan": "We plan to integrate Google Maps API for precise location pinning of issues. Future updates will also include an AI-based duplicate detection system to merge similar reports and push notifications for status changes."
+  },
+  {
+    "id": 3,
+    "name": "Hero App",
+    "image": "https://i.ibb.co/QFZsmryB/hero-app-img.png",
+    "shortDescription": "A web-based application marketplace similar to Google Play Store.",
+    "techStack": ["React", "Context API", "LocalStorage", "Tailwind"],
+    "liveLink": "http://hero-app-766.surge.sh/",
+    "repoLink": "https://github.com/shuvostack/hero-apps.git",
+    "fullDescription": "Hero App is a comprehensive application marketplace where users can discover, browse, and 'install' various software applications. It features a categorized library (Games, Tools, Productivity), a dynamic search engine, and detailed app pages with ratings and descriptions, simulating a complete app store experience.",
+    "challenges": "Implementing an efficient real-time search and filtering system to sort apps by categories was the main challenge. Additionally, managing the state for 'installed' vs 'uninstalled' apps and persisting user preferences using LocalStorage required complex logic handling.",
+    "futurePlan": "We plan to introduce a backend to allow developers to upload their own apps. Future features include a user review system, dark mode, and a personalized recommendation algorithm based on user downloads."
+  }
+]
