@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Facebook, Github, Linkedin, Twitter } from 'lucide-react';
+import { Download, Facebook, Github, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { motion } from 'framer-motion';
 import profileImg from '../../assets/Me2.jpg'; 
 import resume from '../../assets/resume.pdf'; 
@@ -49,7 +49,7 @@ const Hero = () => {
                         <div className="flex items-center gap-4">
                             <SocialIcon href="https://github.com/shuvostack" icon={<Github size={20} />} />
                             <SocialIcon href="https://www.linkedin.com/in/shuvostack/" icon={<Linkedin size={20} />} />
-                            <SocialIcon href="" icon={<Twitter size={20} />} />
+                            <SocialIcon href="https://www.instagram.com/myself_shuvo766/" icon={<Instagram size={20} />} />
                             <SocialIcon href="https://www.facebook.com/shuvo574/" icon={<Facebook size={20} />} />
                         </div>
                     </div>
