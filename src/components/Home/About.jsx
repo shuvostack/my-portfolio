@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Code, Coffee, Globe, BookOpen } from 'lucide-react';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { SiJavascript, SiMongodb, SiTailwindcss } from "react-icons/si";
-import myImg from '../../assets/Me2.jpg';
+// import myImg from '../../assets/Me2.jpg';
+import myImg3 from '../../assets/Me3.png';
 
 const About = () => {
   const fadeIn = {
@@ -43,7 +44,7 @@ const About = () => {
           >
              {/* Central Image Container */}
              <div className="relative z-20 w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-[6px] border-slate-800 shadow-[0_0_40px_rgba(34,197,94,0.3)] bg-slate-900">
-                <img src={myImg} alt="Profile" className="w-full h-full object-cover" />
+                <img src={myImg3} alt="Profile" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-green-500/20 to-cyan-500/20 mix-blend-overlay"></div>
              </div>
 
