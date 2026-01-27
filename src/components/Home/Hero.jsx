@@ -8,7 +8,8 @@ import {
   Twitter,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import profileImg from "../../assets/Me2.jpg";
+// import profileImg from "../../assets/Me2.jpg";
+import bannerImg from "../../assets/Me3.png";
 
 const Hero = () => {
   return (
@@ -89,7 +90,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-cyan-500 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] animate-blob blur-md opacity-70"></div>
             <div className="absolute inset-2 bg-slate-900 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden border-2 border-slate-700/50 z-10">
               <img
-                src={profileImg}
+                src={bannerImg}
                 alt="Mehedi Hasan"
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
               />
