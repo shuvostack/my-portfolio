@@ -3,7 +3,6 @@ import { Link as ScrollLink } from "react-scroll";
 import { useLocation, useNavigate } from "react-router";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Resume from "../../assets/Resume.pdf";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,7 +94,7 @@ const Navbar = () => {
 
           {/* Resume Button */}
           <a
-            href={Resume}
+            href="/resume.pdf"
             download="Mehedi_Resume.pdf"
             className="px-5 py-2 rounded-full border border-green-500/50 text-green-400 hover:bg-green-500/10 hover:border-green-400 transition-all duration-300 font-medium text-sm"
           >
