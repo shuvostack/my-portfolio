@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-import { useLocation, useNavigate } from 'react-router';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import resume from '../../assets/resume.pdf';
+import React, { useState, useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll";
+import { useLocation, useNavigate } from "react-router";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import Resume from "../../assets/Resume.pdf";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +12,12 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const navItems = [
-    { name: 'Home', to: 'home' },
-    { name: 'About', to: 'about' },
-    { name: 'Skills', to: 'skills' },
-    { name: 'Experience', to: 'experience' },
-    { name: 'Projects', to: 'projects' },
-    { name: 'Contact', to: 'contact' },
+    { name: "Home", to: "home" },
+    { name: "About", to: "about" },
+    { name: "Skills", to: "skills" },
+    { name: "Experience", to: "experience" },
+    { name: "Projects", to: "projects" },
+    { name: "Contact", to: "contact" },
   ];
 
   useEffect(() => {
@@ -28,17 +28,17 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (to) => {
     setIsOpen(false);
-    if (location.pathname !== '/') {
-      navigate('/');
+    if (location.pathname !== "/") {
+      navigate("/");
       setTimeout(() => {
         const element = document.getElementById(to);
-        if (element) element.scrollIntoView({ behavior: 'smooth' });
+        if (element) element.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
   };
@@ -47,15 +47,15 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-slate-900/80 backdrop-blur-md shadow-lg border-b border-slate-800'
-          : 'bg-transparent py-2'
+          ? "bg-slate-900/80 backdrop-blur-md shadow-lg border-b border-slate-800"
+          : "bg-transparent py-2"
       }`}
     >
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         {/* --- Logo --- */}
-        <div 
+        <div
           className="text-2xl font-bold cursor-pointer flex items-center gap-1"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <span className="text-slate-100">&lt;</span>
           <span className="bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent font-extrabold tracking-wider">
@@ -68,7 +68,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <div key={item.name} className="relative group">
-              {location.pathname === '/' ? (
+              {location.pathname === "/" ? (
                 <ScrollLink
                   to={item.to}
                   smooth={true}
@@ -95,7 +95,7 @@ const Navbar = () => {
 
           {/* Resume Button */}
           <a
-            href={resume}
+            href={Resume}
             download="Mehedi_Resume.pdf"
             className="px-5 py-2 rounded-full border border-green-500/50 text-green-400 hover:bg-green-500/10 hover:border-green-400 transition-all duration-300 font-medium text-sm"
           >
@@ -124,8 +124,8 @@ const Navbar = () => {
             className="absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-xl border-b border-slate-800 md:hidden shadow-2xl"
           >
             <div className="flex flex-col items-center py-6 gap-6">
-              {navItems.map((item) => (
-                location.pathname === '/' ? (
+              {navItems.map((item) =>
+                location.pathname === "/" ? (
                   <ScrollLink
                     key={item.name}
                     to={item.to}
@@ -145,8 +145,8 @@ const Navbar = () => {
                   >
                     {item.name}
                   </button>
-                )
-              ))}
+                ),
+              )}
               <a
                 href="/resume.pdf"
                 download
