@@ -33,7 +33,7 @@ const Education = () => {
       institution: "Major General Mahmudul Hasan Adarsha College",
       location: "Tangail",
       duration: "Completed",
-      gpa: "GPA: 4.67",
+      gpa: null,
       description: "Completed HSC with excellent academic performance. Built a disciplined foundation for higher studies.",
       icon: <BookOpen size={20} />,
       color: "border-purple-500 shadow-purple-500/20"
